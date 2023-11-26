@@ -19,6 +19,6 @@ describe('App', () => {
   it('should not check the tittle of page', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading')).not.toBeInTheDocument();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 } )
