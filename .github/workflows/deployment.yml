@@ -32,3 +32,10 @@ jobs:
         run: npm run build
       - name: Deploy the project
         run: echo "Deploying the project..."
+  cleaning_up:
+    runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
+    steps:
+      - name: run_multiple_commands
+        run: | 
+          echo "Clenaing up files..."
+          echo "Job completed"
