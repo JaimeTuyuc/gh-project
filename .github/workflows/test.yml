@@ -1,5 +1,8 @@
 name: Run test Cases
-on: push
+on: 
+  push: 
+    branches: 
+    - master  #! Set the branch you want to run your test cases on
 jobs:
   test:
     runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
