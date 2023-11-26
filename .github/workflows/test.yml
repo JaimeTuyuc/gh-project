@@ -1,0 +1,16 @@
+name: Run test Cases
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+      - name: Install nodeJs on the runner #! This step is required only if you are using nodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci #! This step is required only if you are using nodeJs
+      - name: Run test cases
+        run: npm run test #! This step is required only if you are using nodeJs
