@@ -18,7 +18,7 @@ jobs:
       - name: Run test cases
         run: npm run test #! This step is required only if you are using nodeJs
   deploy:
-    runs-on: ubutu-latest #! Set the OS you want to run your test cases on
+    runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
     steps:
       - name: Get the code
         uses: actions/checkout@v3
