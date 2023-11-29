@@ -2,7 +2,9 @@ name: Deploy project
 on: 
   push: 
     branches: 
-    - master  #! Set the branch you want to run your test cases on
+      - master  #! Set the branch you want to run your test cases on
+  workflow_dispatch:  #manually trigger the workflow
+
 jobs:
   test:
     runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
