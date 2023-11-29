@@ -18,6 +18,7 @@ jobs:
       - name: Run test cases
         run: npm run test #! This step is required only if you are using nodeJs
   deploy:
+    needs: test
     runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
     steps:
       - name: Get the code
@@ -33,6 +34,7 @@ jobs:
       - name: Deploy the project
         run: echo "Deploying the project..."
   cleaning_up:
+    needs: deploy
     runs-on: ubuntu-latest #! Set the OS you want to run your test cases on
     steps:
       - name: run_multiple_commands
