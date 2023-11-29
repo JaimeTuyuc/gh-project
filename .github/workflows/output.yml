@@ -1,0 +1,19 @@
+
+name: Output information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        run: |
+          echo "The current time is $(date)."
+          echo "The current directory is $(pwd)."
+          echo "The current user is $(whoami)."
+          echo "${{ toJson(github) }} github context"
+          echo "${{ toJson(job) }} job context"
+          echo "${{ toJson(steps) }} steps context"
+          echo "${{ toJson(runner) }} runner context"
+          echo "${{ toJson(secrets) }}  secrets context"
+          echo "${{ toJson(inputs) }} inputs context"
+          echo "${{ toJson(needs) }} matrix context" 
